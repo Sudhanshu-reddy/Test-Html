@@ -1,0 +1,259 @@
+/* ===== Base Styles (Mobile First) ===== */
+.App {
+  text-align: center;
+  color: #000;
+  background-color: #dfbebe;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  padding: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.Samplecomp,
+.Menucomp {
+  background-color: #a7a5a5;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Menucomp {
+  background-color: #c0c0c0;
+}
+
+.Samplecomp h1,
+.Menucomp h1 {
+  color: #333;
+  font-size: 22px;
+}
+
+.Samplecomp h2,
+.Menucomp h2 {
+  color: #333;
+  font-size: 18px;
+}
+
+.Menucomp.Menucomp-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Menucomp a {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  margin: 5px 0;
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  background-color: #e0e0e0;
+  transition: background 0.3s;
+}
+
+.Menucomp a:hover {
+  background-color: #9fea8b;
+  color: #000;
+}
+
+.Imagecomp {
+  text-align: center;
+  background-color: #9fea8b;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+.Imagecomp img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  max-height: 430px;
+  object-fit: cover;
+}
+/* show product list show in grid format */
+/* div Showproductlistgrid, product-grid, product-card show product list name price image description */
+/* ===== Responsive Styles ===== */
+/* Container styling */
+.Showproductlistgrid {
+  padding: 20px;
+  background-color: #dababa;
+}
+
+/* Heading styling */
+h2, h3 {
+  margin: 10px;
+}
+
+/* Responsive product grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Card styling */
+.product-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+/* Product image styling */
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Button styling */
+.add-to-cart {
+  margin: 5px;
+  padding: 8px 12px;
+  border: 1px solid black;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+.add-to-cart:hover {
+  background-color: #e0e0e0;
+}
+
+/* ===== Media Queries ===== */
+/* These media queries are used to adjust the layout and styles for different screen sizes. */
+/* Mobile View (max-width: 599px) */
+
+/* ===== Mobile View (max-width: 599px) ===== */  
+
+/* ===== Tablet View (min-width: 600px) ===== */
+@media (min-width: 600px) {
+  .App {
+    padding: 25px;
+    font-size: 20px;
+  }
+
+  .Samplecomp h1,
+  .Menucomp h1 {
+    font-size: 24px;
+  }
+
+  .Menucomp a {
+    font-size: 18px;
+  }
+
+  .Imagecomp {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+/* ===== Desktop View (min-width: 900px) ===== */
+@media (min-width: 900px) {
+  .App {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .Samplecomp,
+  .Menucomp,
+  .Imagecomp {
+    margin: 20px 0;
+  }
+
+  .Menucomp.Menucomp-links {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .Menucomp a {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+  }
+
+  .Imagecomp img {
+    max-height: 430px;
+  }
+}
+
+
+ 
+.navbar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger {
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+}
+
+.Menucomp-links {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.Menucomp-links.open {
+  display: flex;
+}
+
+@media (min-width: 900px) {
+  .hamburger {
+    display: none;
+  }
+
+  .Menucomp-links {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 0;
+  }
+}
+
+
+
+.formevent{
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.formevent input{
+    width: 15rem;
+    height: 2rem;
+  
+}
+
+.subbutton{
+  padding: 5px 10px ;
+  border-radius: 5px;
+  margin-top: 5px ;
+  background-color: brown;
+}
